@@ -26,14 +26,22 @@ If nothing complies, the whole budget returns to the client and the tender ends 
 https://github.com/IanCao/compliant-tender
 https://github.com/IanCao/compliant-tender/blob/main/contracts/compliant_tender.py
 https://github.com/IanCao/compliant-tender/blob/main/README.md
+https://explorer-studio.genlayer.com/address/0x50Bb3bfd3bD40a9C47205fe92A6Ad28D229B0995
 ```
 
-第一条是机器校验 `github-repo` 用的仓库根，全新仓库。
+第一条是机器校验 `github-repo` 用的仓库根，全新仓库。第四条是本周 Intelligent
+Contracts 强制要求的 `genlayer-explorer-contract` 证据。
 
-## 部署（可选）
+## 部署（已完成）
 
 Studio → Studionet → 粘贴 `contracts/compliant_tender.py`，无构造参数。
 开标：`open_tender("需求文本", 604800)`，附带 value = 预算。
+
+| 项 | 值 |
+|---|---|
+| 地址 | `0x50Bb3bfd3bD40a9C47205fe92A6Ad28D229B0995` |
+| 构造参数 | 无 |
+| 链上校验 | schema 含 `open_tender`、`submit_bid`、`award`、`cancel`、`is_bidding_open`；源码 18,852 字符与仓库文件逐字节一致 |
 
 ## 自检
 
